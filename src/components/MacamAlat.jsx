@@ -8,11 +8,11 @@ export default function MacamAlat() {
             <h2>Macam Alat Pengukur Suhu</h2>
             <div className="img-macam-alat">
                 <img
-                    src="../../public/images/AlatPengukur.jpeg"
+                    src="/images/AlatPengukur.jpeg"
                     alt="Macam-macam alat pengukur suhu"
                 />
                 <img
-                    src="../../public/images/AlatPengukur2.jpeg"
+                    src="/images/AlatPengukur2.jpeg"
                     alt="Macam-macam alat pengukur suhu"
                 />
             </div>

@@ -6,8 +6,8 @@ export default function MacamSkala() {
         <>
             <h2>Macam Macam Skala Suhu</h2>
             <div className="img-skala">
-                <img src="../../public/images/SkalaSuhu.jpg" alt="Skala Suhu" />
-                <img src="../../public/images/SkalaSuhu2.jpg" alt="Skala Suhu" />
+                <img src="/images/SkalaSuhu.jpg" alt="Skala Suhu" />
+                <img src="/images/SkalaSuhu2.jpg" alt="Skala Suhu" />
             </div>
             <div className="macam-skala">
                 <p>

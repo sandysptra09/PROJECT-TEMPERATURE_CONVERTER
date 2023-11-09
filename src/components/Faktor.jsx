@@ -5,8 +5,8 @@ export default function Faktor() {
         <>
             <h2 className="sub-judul">Faktor Yang Mempengaruhi Suhu</h2>
             <div className="img-faktor">
-                <img src="../../public/images/faktor.jpeg" alt="Faktor Yang Mempengaruhi Suhu" />
-                <img src="../../public/images/faktor2.jpeg" alt="Faktor Yang Mempengaruhi Suhu" />
+                <img src="/images/faktor.jpeg" alt="Faktor Yang Mempengaruhi Suhu" />
+                <img src="/images/faktor2.jpeg" alt="Faktor Yang Mempengaruhi Suhu" />
             </div>
             <div className="faktor">
                 <p>
