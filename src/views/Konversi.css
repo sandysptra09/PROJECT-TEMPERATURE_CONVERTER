@@ -7,3 +7,82 @@
     width: 80%;
     text-align: justify;
 }
+
+.calculator {
+    width: 50%;
+    text-align: left;
+}
+
+.calculator legend {
+    margin-left: 12px;
+}
+
+.label,
+.skala {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.label label {
+    margin-left: 16px;
+    margin-right: 28px;
+}
+
+.label input {
+    width: 21.6%;
+    padding: 8px 8px;
+    font-size: 16px;
+}
+
+.label input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.skala label {
+    margin: 0 1rem;
+}
+
+.skala select {
+    width: 25%;
+    padding: 8px 8px;
+    font-size: 16px;
+}
+
+.skala select option {
+    background-color: transparent;
+}
+
+.hitung-skala-suhu {
+    margin: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.box-celcius,
+.box-kelvin,
+.box-fahrenheit,
+.box-reamur {
+    border: 1px gray dashed;
+    padding: 1rem 1rem;
+}
+
+.box-hasil .hasil {
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+
+.reset {
+    margin: 2rem 1rem;
+}
+
+.reset button {
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+}
