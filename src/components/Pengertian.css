@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    gap: 2rem;
+    text-align: left;
+}
+
+.pengertian {
+    width: 800px;
+    text-align: justify;
+}
+
+.sub-judul {
+    text-align: left;
+}
+
+.daftar-isi {
+    border: 1px solid;
+    padding: 0 2rem;
+    height: max-content;
+}
+
+.daftar-isi ol li a {
+    color: rgba(255, 255, 255, 0.87);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.daftar-isi .title-konversi {
+    text-decoration: none;
+    color: lightblue;
+
+    &:hover {
+        color: rgba(255, 255, 255, 0.87);
+        text-decoration: underline;
+    }
+}
