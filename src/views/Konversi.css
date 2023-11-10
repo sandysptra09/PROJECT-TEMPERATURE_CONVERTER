@@ -3,6 +3,22 @@
     text-align: justify;
 }
 
+.skala-tetapan {
+    width: 80%;
+    text-align: justify;    
+}
+
+.skala-img {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.skala-tetapan .skala-img img {
+    width: 450px;
+    height: 300px;
+}
+
 .konsep-suhu {
     width: 80%;
     text-align: justify;
@@ -54,6 +70,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 .skala select option {
     background-color: transparent;
+}
+
+.title-hasil {
+    margin: 0 1rem;
 }
 
 .hitung-skala-suhu {

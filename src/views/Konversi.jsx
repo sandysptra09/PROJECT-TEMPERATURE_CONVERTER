@@ -1,5 +1,6 @@
 import About from "./About";
 import Calculator from "./Calculator";
+import Skala from "./Skala";
 
 export default function Konversi() {
     return (
@@ -9,6 +10,7 @@ export default function Konversi() {
             <Calculator/>
             
             <About/>
+            <Skala/>
         </div>
     )
 }

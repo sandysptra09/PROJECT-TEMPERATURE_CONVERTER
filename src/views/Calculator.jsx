@@ -1,4 +1,12 @@
+import React, { useState } from 'react';
+
+
 export default function Calculator() {
+   
+
+    
+
+
     return (
         <div className="container-calculator">
             <div className="calculator">
@@ -8,24 +16,29 @@ export default function Calculator() {
                     </legend>
                     <div className="label">
                         <label>Masukan Nilai Suhu</label>
-                        <input type="number"></input>
+                        <input type="number" ></input>
                     </div>
                     <div className="skala">
                         <label>Pilih Skala Satuannya</label>
                         <select>
-                            <option>Celcius (°C)</option>
-                            <option>Kelvin (K)</option>
-                            <option>Fahrenheit (°F)</option>
-                            <option>Reamur (°R)</option>
+                            <option value='Celcius'>Celcius (°C)</option>
+                            <option value='Kelvin'>Kelvin (K)</option>
+                            <option value='Fahrenheit'>Fahrenheit (°F)</option>
+                            <option value='Reamur'>Reamur (°R)</option>
                         </select>
                     </div>
+
+                    <div className="title-hasil">
+                        <h3>Hasil :</h3>
+                    </div>
+
+                   
 
                     <div className="hitung-skala-suhu">
                         <div className="box-celcius">
                             <label>Celcius (°C)</label>
                             <div className="box-hasil">
                                 <span>36,0°C = </span>
-                                {/*Output masih dummy */}
                                 <span className="hasil">36,0 °C</span>
                             </div>
                         </div>
@@ -34,7 +47,6 @@ export default function Calculator() {
                             <label>Kelvin  (°K)</label>
                             <div className="box-hasil">
                                 <span>36,0°C = </span>
-                                {/*Output masih dummy */}
                                 <span className="hasil">36,0 °K</span>
                             </div>
                         </div>
@@ -43,7 +55,6 @@ export default function Calculator() {
                             <label>Reamur  (°R)</label>
                             <div className="box-hasil">
                                 <span>36,0°C = </span>
-                                {/*Output masih dummy */}
                                 <span className="hasil">36,0 °R</span>
                             </div>
                         </div>
@@ -52,7 +63,6 @@ export default function Calculator() {
                             <label>Fahrenheit  (°F)</label>
                             <div className="box-hasil">
                                 <span>36,0°C = </span>
-                                {/*Output masih dummy */}
                                 <span className="hasil">36,0 °F</span>
                             </div>
                         </div>
