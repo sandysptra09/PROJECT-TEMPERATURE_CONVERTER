@@ -46,18 +46,22 @@ export default function Calculator() {
         };
 
         if (skala === 'Celcius') {
+            hasilKonversi.Celcius = suhuCelcius;
             hasilKonversi.Kelvin = (suhuCelcius + 273.15).toFixed(1);
             hasilKonversi.Fahrenheit = ((suhuCelcius * 9 / 5) + 32).toFixed(1);
             hasilKonversi.Reamur = (suhuCelcius * 4 / 5).toFixed(1);
         } else if (skala === 'Kelvin') {
+            hasilKonversi.Kelvin = suhuCelcius;
             hasilKonversi.Celcius = (suhuCelcius - 273.15).toFixed(1);
             hasilKonversi.Fahrenheit = ((suhuCelcius - 273.15) * 9 / 5 + 32).toFixed(1);
             hasilKonversi.Reamur = ((suhuCelcius - 273.15) * 4 / 5).toFixed(1);
         } else if (skala === 'Fahrenheit') {
+            hasilKonversi.Fahrenheit = suhuCelcius;
             hasilKonversi.Celcius = ((suhuCelcius - 32) * 5 / 9).toFixed(1);
             hasilKonversi.Kelvin = ((suhuCelcius - 32) * 5 / 9 + 273.15).toFixed(1);
             hasilKonversi.Reamur = ((suhuCelcius - 32) * 5 / 9 * 4 / 5).toFixed(1);
         } else if (skala === 'Reamur') {
+            hasilKonversi.Reamur = suhuCelcius;
             hasilKonversi.Celcius = (suhuCelcius * 5 / 4).toFixed(1);
             hasilKonversi.Kelvin = (suhuCelcius * 5 / 4 + 273.15).toFixed(1);
             hasilKonversi.Fahrenheit = ((suhuCelcius * 5 / 4 * 9 / 5) + 32).toFixed(1);
@@ -65,6 +69,17 @@ export default function Calculator() {
 
         setHasil(hasilKonversi);
     }
+
+    const handleReset = () => {
+        setInputSuhu('');
+        setSelectedSkala('Celcius');
+        setHasil({
+            Celcius: '',
+            Kelvin: '',
+            Fahrenheit: '',
+            Reamur: '',
+        });
+    };
 
 
     return (
@@ -140,7 +155,7 @@ export default function Calculator() {
                     </div> */}
 
                     <div className="reset">
-                        <button>Hapus</button>
+                        <button onClick={handleReset}>Reset</button>
                     </div>
 
                 </fieldset>
