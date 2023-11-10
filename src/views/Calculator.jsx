@@ -2,9 +2,27 @@ import React, { useState } from 'react';
 
 
 export default function Calculator() {
-   
+    // state dan fungsi
+    const [inputSuhu, setInputSuhu] = useState('')
+    const [selectedSkala, setSelectedSkala] = useState('Celcius')
+    const [hasil, setHasil] = useState({
+        Celcius: '',
+        Kelvin: '',
+        Fahrenheit: '',
+        Reamur: '',
+    });
 
-    
+    // handle change
+    const handleInputChange = (e) => {
+        setInputSuhu(e.target.value);
+        konversiSuhu(inputSuhu, e.target.value)
+    }
+
+    // handle change
+    const handleSelectChange = (e) => {
+        setSelectedSkala(e.target.value);
+        konversiSuhu(inputSuhu, e.target.value);
+    }
 
 
     return (
@@ -16,11 +34,11 @@ export default function Calculator() {
                     </legend>
                     <div className="label">
                         <label>Masukan Nilai Suhu</label>
-                        <input type="number" ></input>
+                        <input type="number" value={inputSuhu} onChange={handleInputChange}></input>
                     </div>
                     <div className="skala">
                         <label>Pilih Skala Satuannya</label>
-                        <select>
+                        <select value={selectedSkala} onChange={handleSelectChange}>
                             <option value='Celcius'>Celcius (°C)</option>
                             <option value='Kelvin'>Kelvin (K)</option>
                             <option value='Fahrenheit'>Fahrenheit (°F)</option>
@@ -32,9 +50,9 @@ export default function Calculator() {
                         <h3>Hasil :</h3>
                     </div>
 
-                   
+                 
 
-                    <div className="hitung-skala-suhu">
+                    {/* <div className="hitung-skala-suhu">
                         <div className="box-celcius">
                             <label>Celcius (°C)</label>
                             <div className="box-hasil">
@@ -66,7 +84,7 @@ export default function Calculator() {
                                 <span className="hasil">36,0 °F</span>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="reset">
                         <button>Hapus</button>
