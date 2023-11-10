@@ -92,6 +92,18 @@ export default function Calculator() {
                         <h3>Hasil :</h3>
                     </div>
 
+                    {/* Hasil */}
+                    <div className='hitung-skala-suhu'>
+                        {Object.keys(hasil).map((skala, index) => (
+                            <div key={index} className={`box-${skala.toLowerCase()}`}>
+                                <label>{skala}</label>
+                                <div className='box-hasil'>
+                                    <span>{inputSuhu} ° {selectedSkala} = </span>
+                                    <span className='hasil'>{hasil[skala]} ° {skala}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
 
                     {/* <div className="hitung-skala-suhu">
                         <div className="box-celcius">
