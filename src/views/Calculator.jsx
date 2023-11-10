@@ -24,6 +24,48 @@ export default function Calculator() {
         konversiSuhu(inputSuhu, e.target.value);
     }
 
+    // fungsi kondisi dan rumus suhu
+    const konversiSuhu = (nilai, skala) => {
+        if (!nilai || isNaN(nilai)) {
+            setHasil({
+                Celcius: '',
+                Kelvin: '',
+                Fahrenheit: '',
+                Reamur: ''
+            });
+            return;
+        }
+
+        const suhuCelcius = parseFloat(nilai);
+
+        let hasilKonversi = {
+            Celcius: suhuCelcius.toFixed(1),
+            Kelvin: '',
+            Fahrenheit: '',
+            Reamur: ''
+        };
+
+        if (skala === 'Celcius') {
+            hasilKonversi.Kelvin = (suhuCelcius + 273.15).toFixed(1);
+            hasilKonversi.Fahrenheit = ((suhuCelcius * 9 / 5) + 32).toFixed(1);
+            hasilKonversi.Reamur = (suhuCelcius * 4 / 5).toFixed(1);
+        } else if (skala === 'Kelvin') {
+            hasilKonversi.Celcius = (suhuCelcius - 273.15).toFixed(1);
+            hasilKonversi.Fahrenheit = ((suhuCelcius - 273.15) * 9 / 5 + 32).toFixed(1);
+            hasilKonversi.Reamur = ((suhuCelcius - 273.15) * 4 / 5).toFixed(1);
+        } else if (skala === 'Fahrenheit') {
+            hasilKonversi.Celcius = ((suhuCelcius - 32) * 5 / 9).toFixed(1);
+            hasilKonversi.Kelvin = ((suhuCelcius - 32) * 5 / 9 + 273.15).toFixed(1);
+            hasilKonversi.Reamur = ((suhuCelcius - 32) * 5 / 9 * 4 / 5).toFixed(1);
+        } else if (skala === 'Reamur') {
+            hasilKonversi.Celcius = (suhuCelcius * 5 / 4).toFixed(1);
+            hasilKonversi.Kelvin = (suhuCelcius * 5 / 4 + 273.15).toFixed(1);
+            hasilKonversi.Fahrenheit = ((suhuCelcius * 5 / 4 * 9 / 5) + 32).toFixed(1);
+        }
+
+        setHasil(hasilKonversi);
+    }
+
 
     return (
         <div className="container-calculator">
@@ -50,7 +92,6 @@ export default function Calculator() {
                         <h3>Hasil :</h3>
                     </div>
 
-                 
 
                     {/* <div className="hitung-skala-suhu">
                         <div className="box-celcius">
